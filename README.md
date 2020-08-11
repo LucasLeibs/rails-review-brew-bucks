@@ -22,14 +22,14 @@
 * route to edit a brew
 * route to '/brews/strongest' find the brews with the highest strength
 
-#### BrewsCustomer Resource
+#### BrewCustomer Resource
 * A Brew can have many customers and a Customer can have many brews
-* They will be connected by a join called `brews_customers`(this will be the table name). 
+* They will be connected by a join called `brew_customers`(this will be the table name). 
 * It will have a `customer_id`, and a `brew_id` that will both be integers.
 * It will also have a `price` which will be a float.
 
 #### Customer Resource
-A Customer has a `customer_name`, which is a string.
+A Customer has a `name`, which is a string.
 
 * Make a model Customer with the appropriate attributes
 * route for '/customers' that displays all of the customers as links to their show pages
@@ -60,7 +60,7 @@ end
 
 10.times do
   Customer.create(
-    customer_name: Faker::FunnyName.name_with_initial
+    name: Faker::FunnyName.name_with_initial
   )
 end
 ```
