@@ -34,10 +34,7 @@ A Customer has a `customer_name`, which is a string.
 * Make a model Customer with the appropriate attributes
 * route for '/customers' that displays all of the customers as links to their show pages
 * the show page should also include a list of brews the customer has made ( if any ). Each brew should be a link to that specific brews show page.
-
-#### Ordering a brew
-* route to create a new BrewsCustomer
-* the new page should allow you to choose the brew and the customer making the order.
+* create a new user with a favorite brew (hint: collection_select)
 
 Now that you have created the Customer association:
 * the brew show page should display a list of all of the customers who have enjoyed that brew
