@@ -1,0 +1,25 @@
+<% if !!flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |error| %>
+            <li><%= error %></li>
+        <% end %>   
+    </ul> 
+<% end %>
+
+<%# if @customer.errors.any? %>
+    <ul>
+        <%# @customer.errors.full_messages.each do |error| %>
+            <li><%#= error %></li>
+        <%# end %>   
+    </ul> 
+<%# end %>
+
+<%= form_with model: @customer, local: true do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :brew_ids  %>
+    <%= f.collection_select :brew_ids, Brew.all, :id, :blend_name  %>
+
+    <%= f.submit %>
+<% end %>

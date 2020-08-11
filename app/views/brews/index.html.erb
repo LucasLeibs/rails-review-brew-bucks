@@ -1,0 +1,7 @@
+<h1> Brew Index Page </h1>
+
+<ul>
+    <% @brews.each do |brew| %>
+       <li> <%= link_to brew.blend_name, brew  %> </li>
+    <% end %>
+</ul>
